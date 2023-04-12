@@ -14,29 +14,7 @@ function renderChunks(deps) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    minify: true,
-    rollupOptions: {
-      input: {
-        main: 'src/main.jsx',
-        index: 'index.html'
-      },
-      output: {
-        
-        format: 'es',
-        manualChunks: {
-          react: ['react'],
-          reactdom: ['react-dom'],
-          vendor: ['ethers'],
-          moment: ['moment'],
-          emulticall: ['ethers-multicall'],
-          node: ['node-sass'],
-          sass: ['sass'],
-          wallet: ['use-wallet2']
-        },
-      },
-    },
-  },
+  
   plugins: [react(),],
   })
 
